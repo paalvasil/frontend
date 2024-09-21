@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Ranking de cervejas </title>
+    <link rel="icon" href="img/beer.jpg" type="image/jpg">
+</head>
+<body>
+    <header>
+        <div class="title">
+            <h1>Ranking melhores cervejas </h1>            
+        </div>
+        <div class="banner">
+            <img src="img/cervejas.png" alt="Imagem de copos com cervejas">
+        </div>
+    </header>
+    <main class="container my-4">
+        <section>
+            <form id="myForm">               
+                <h2>Cadastrar cerveja</h2>
+                <div>
+                    <div>  
+                        <label for="nameBeer">Cerveja:</label>
+                        <input type="text" id="newBeer" name="newBeer" placeholder="Digite o nome da Cerveja" required>
+                    </div>                    
+                    <div>  
+                        <label for="typeBeer">Tipo:</label>
+                        <input type="text" id="typeBeer" name="typeBeer" placeholder="Digite o tipo da cerveja">
+                    </div>
+                    <div>  
+                        <label for="ibuBeer">IBU:</label>
+                        <input type="text" id="ibuBeer" name="ibuBeer" placeholder="Digite o IBU">
+                    </div>
+                    <div>  
+                        <label for="priceBeer">Valor:</label>
+                        <input type="text" id="priceBeer" name="priceBeer" placeholder="Digite o preço da cerveja">
+                    </div>
+                    <div>  
+                        <label for="noteBeer">Nota:</label>
+                        <input type="text" id="noteBeer" name="noteBeer" placeholder="Digite a nota para a cerveja" required>
+                    </div>
+                    <button type="button" aria-label="Botão de enviar o formulário" onclick="newItem()" class="btn btn-primary">Enviar</button>
+                    <button type="reset" aria-label="Botão de limpar o formulário" class="btn btn-secondary">Limpar</button>
+                </div>        
+            </form>
+        </section>    
+        <section>
+            <table id="myTable">
+                <thead>
+                    <tr>
+                        <th scope="col">Data</th>
+                        <th scope="col">Cerveja</th>
+                        <th scope="col">Tipo </th>
+                        <th scope="col">IBU</th>
+                        <th scope="col">Valor</th>
+                        <th scope="col">Nota</th>                
+                        <th><img src="https://cdn-icons-png.flaticon.com/512/126/126468.png" alt="Imagem de uma lixeira" width="15px" height="15px"></th>
+                    </tr>
+                </thead>
+                <tbody id="table-body"></tbody>
+            </table>
+        </section> 
+    </main>
+    <footer class="footer">       
+        <img src="img/footer2.jpeg" alt="Rodapé com espuma de cerveja">
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
